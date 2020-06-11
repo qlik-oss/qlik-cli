@@ -1,6 +1,6 @@
 # qlik-cli
 
-**qlik-cli**, known on the command line simply as `qlik`, is a CLI generated directly from API specifications. It is meant to be used for basically any task against Qlik Sense SaaS.
+**qlik-cli**, known on the command line simply as `qlik`, is a CLI generated directly from API specifications. It allows you to do basically any task towards Qlik Sense SaaS leveraging all its public APIs.
 
 The project will be open-sourced in the near future. Until then however, this repo will serve as a placeholder and a mirror for releases.
 
@@ -48,7 +48,7 @@ If you prefer not using any of the package managers above you can go to our [rel
 
 ## Usage
 
-The first step we recommend is to source the completion (see the section below).
+The first step we recommend is to [source the completion](#completion).
 After that, you will probably want to create a context with the command:
 ```
 qlik context init
