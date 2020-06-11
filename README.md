@@ -48,7 +48,7 @@ If you prefer not using any of the package managers above you can go to our [rel
 
 ## Usage
 
-The first step we recommend is to [source the completion](#completion).
+The first step we recommend is to setup [completion](#completion).
 After that, you will probably want to create a context with the command:
 ```
 qlik context init
