@@ -2,7 +2,7 @@
 
 **qlik-cli**, known on the command line simply as qlik, is a CLI generated directly from API specifications. It is meant to be used for basically any task against Qlik Sense SaaS.
 
-Since the project is not yet open-source, this repo will serve as a public issue tracker and a mirror for releases.
+The project will be open-sourced in the near future. Until then however, this repo will serve as a placeholder and a mirror for releases.
 
 For more information you can go to:
  * https://qlik.dev/tutorials/get-started-with-qlik-cli
