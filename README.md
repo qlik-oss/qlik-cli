@@ -44,7 +44,7 @@ This way, you don't have to specify the source every time you want to install or
 
 ### General
 
-If you prefer not using any of the package managers above you can go to our [releases](https://github.com/qlik-oss/qlik-cli/releases) and choose a one suitable for your OS.
+If you prefer not using any of the package managers above you can go to our [releases](https://github.com/qlik-oss/qlik-cli/releases) and choose one suitable for your OS.
 
 ## Usage
 
