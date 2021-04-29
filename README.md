@@ -12,7 +12,7 @@ For more information you can go to:
 
 After any installation, don't forget to add the [completion](#completion) as well, it is usually quite helpful when writing commands.
 
-### Brew
+### Brew (Mac/Linux)
 
 To install with brew you need to first tap our [qlik-oss/taps](https://github.com/qlik-oss/homebrew-taps) if you haven't already:
 ```
@@ -26,19 +26,9 @@ Just like that. :beers:
 
 **Note:** This will work perfectly fine for either Mac or Linux (where you can use `linuxbrew`) and even Windows Subsystem Linux (WSL) as a matter of fact.
 
-### Chocolatey
+### Chocolatey (Windows)
 
-Want to install using Chocolatey? Then simply type:
-```
-choco install qlik-cli --source https://www.nuget.org/api/v2
-```
-And you're ready to go. :chocolate_bar:
-
-If you want, you can add `nuget.org` as a source:
-```
-choco source add --name nuget.org --source https://www.nuget.org/api/v2
-```
-This way, you don't have to specify the source every time you want to install or upgrade `qlik-cli`.
+Installation on Windows via package manager is not currently available. You can download the [Windows executable](https://github.com/qlik-oss/qlik-cli/releases).
 
 **Note:** Check out the [Completion for Powershell](#completion-for-powershell) section if you're interested in how to set up Powershell completion.
 
