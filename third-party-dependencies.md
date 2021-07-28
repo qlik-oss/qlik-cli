@@ -265,6 +265,7 @@ limitations under the License.
 ## [spf13/pflag](https://github.com/spf13/pflag)
 
 ```text
+BSD 3-Clause License
 Copyright (c) 2012 Alex Ogier. All rights reserved.
 Copyright (c) 2012 The Go Authors. All rights reserved.
 
@@ -324,6 +325,8 @@ SOFTWARE.
 ## [cheggaaa/pb](https://github.com/cheggaaa/pb)
 
 ```text
+BSD 3-Clause License
+
 Copyright (c) 2012-2015, Sergey Cherepanov
 All rights reserved.
 
@@ -547,6 +550,8 @@ SOFTWARE.
 ## [mailru/easyjson](https://github.com/mailru/easyjson)
 
 ```text
+MIT License
+
 Copyright (c) 2016 Mail.Ru Group
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -684,6 +689,8 @@ POSSIBILITY OF SUCH DAMAGE.
 ## [sergi/go-diff](https://github.com/sergi/go-diff)
 
 ```text
+MIT License
+
 Copyright (c) 2012-2016 The go-diff Authors. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a
@@ -734,6 +741,8 @@ SOFTWARE.
 ## [tus/tusd](https://github.com/tus/tusd)
 
 ```text
+MIT License
+
 Copyright (c) 2013-2017 Transloadit Ltd and Contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -758,6 +767,8 @@ SOFTWARE.
 ## [golang.org/x/mod](https://pkg.go.dev/golang.org/x/mod)
 
 ```text
+BSD-3-Clause License
+
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -790,6 +801,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ## [golang.org/x/net](https://pkg.go.dev/golang.org/x/net)
 
 ```text
+BSD-3-Clause License
+
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -822,6 +835,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ## [golang.org/x/term](https://pkg.go.dev/golang.org/x/term)
 
 ```text
+BSD-3-Clause License
+
 Copyright (c) 2009 The Go Authors. All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
