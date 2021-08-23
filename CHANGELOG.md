@@ -1,5 +1,25 @@
 # Changelog
 
+## 2.4.1
+- Fix: CI pipeline release
+
+## 2.4.0
+
+- New: Commands have been updated to reflect the latest API changes.
+
+- New: Notify users when a new version of qlik-cli is available. The notification message contains URL with detailed changelog of the latest release.
+
+- New: Added self update command that enables users to update to the latest version of qlik-cli by simply running: `qlik update`. One exception here are binaries installed with Chocolatey that will not be updated due to permission restrictions that Chocolatey has on it's binary directory.
+
+- New: Added support for OpenAPI specs that define parameters at the path level. In this case, the parameters are inherited by all operations under that path.
+
+- New: The animated progress bar is now based on estimated upload time.
+
+- New: Better support for unix-like Windows terminals (MingGW, MSYS2, and Cygwin).
+
+- Fix: Various small improvements and bugfixes.
+
+
 ## 2.3.1
 
 - Fix: CI pipeline release
