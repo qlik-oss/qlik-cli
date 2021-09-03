@@ -5,9 +5,9 @@
     <id>qlik-cli</id>
     <version>2.4.2</version>
     <projectUrl>https://github.com/qlik-oss/qlik-cli</projectUrl>
-    <packageSourceUrl>https://www.nuget.org/packages/qlik-cli</packageSourceUrl>
+    <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <owners>QlikDevToolkit</owners>
-    <title>Qlik CLI</title>
+    <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <!-- Some of these will have to be added after the project is open-source -->
     <iconUrl>https://qlik-oss.github.io/qlik-cli.github.io/icons/qlik-cli.png</iconUrl>
