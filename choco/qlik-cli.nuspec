@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>qlik-cli</id>
+    <version>2.4.2</version>
+    <projectUrl>https://github.com/qlik-oss/qlik-cli</projectUrl>
+    <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
+    <owners>QlikDevToolkit</owners>
+    <title>qlik CLI</title>
+    <authors>Qliktech International AB</authors>
+    <!-- Some of these will have to be added after the project is open-source -->
+    <iconUrl>https://qlik-oss.github.io/qlik-cli.github.io/icons/qlik-cli.png</iconUrl>
+    <licenseUrl>https://github.com/qlik-oss/qlik-cli/blob/master/LICENSE</licenseUrl>
+    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/qlik-oss/qlik-cli/issues</bugTrackerUrl>
+    <tags>qlik-cli</tags>
+    <summary>qlik is a tool for working with any of Qlik Sense SaaS</summary>
+    <description>qlik is a Command Line Interface for Qlik Sense SaaS.
+
+It gives you access to most public APIs which enables you to administrate your tenant and apps,
+develop and manage apps, migrate data and much more.</description>
+    <releaseNotes>
+## Release notes
+
+
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
