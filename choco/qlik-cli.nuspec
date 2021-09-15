@@ -1,35 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.4.2</version>
-    <projectUrl>https://github.com/qlik-oss/qlik-cli</projectUrl>
-    <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
-    <owners>QlikDevToolkit</owners>
+    <version>2.5.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
-    <!-- Some of these will have to be added after the project is open-source -->
-    <iconUrl>https://qlik-oss.github.io/qlik-cli.github.io/icons/qlik-cli.png</iconUrl>
+    <owners>QlikDevToolkit</owners>
     <licenseUrl>https://github.com/qlik-oss/qlik-cli/blob/master/LICENSE</licenseUrl>
-    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
-    <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
-    <!--<mailingListUrl></mailingListUrl>-->
-    <bugTrackerUrl>https://github.com/qlik-oss/qlik-cli/issues</bugTrackerUrl>
-    <tags>qlik-cli</tags>
-    <summary>qlik is a tool for working with any of Qlik Sense SaaS</summary>
+    <projectUrl>https://github.com/qlik-oss/qlik-cli</projectUrl>
+    <iconUrl>https://qlik-oss.github.io/qlik-cli.github.io/icons/qlik-cli.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>qlik is a Command Line Interface for Qlik Sense SaaS.
 
 It gives you access to most public APIs which enables you to administrate your tenant and apps,
 develop and manage apps, migrate data and much more.</description>
-    <releaseNotes>
-## Release notes
+    <summary>qlik is a tool for working with any of Qlik Sense SaaS</summary>
+    <releaseNotes>## Release notes
 
-
-    </releaseNotes>
+- New: Added support for outbound proxy: you can now set the operating system environment variables called `HTTPS_PROXY/HTTP_PROXY` with the hostname or IP address of the proxy server. _Note:_ `HTTPS_PROXY` takes precedence over `HTTP_PROXY` for https requests. Qlik CLI supports only Basic Authentication.
+- Fix: Improve --limit flag descriptions
+- Fix: Updated the included QCS API-specifications</releaseNotes>
+    <tags>qlik-cli</tags>
+    <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
+    <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
+    <bugTrackerUrl>https://github.com/qlik-oss/qlik-cli/issues</bugTrackerUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
-  </files>
 </package>
