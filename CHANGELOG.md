@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.5.1
+
+- Fix: YAML-spec support
+
 ## 2.5.0
 
 - New: Added support for outbound proxy: you can now set the operating system environment variables called `HTTPS_PROXY/HTTP_PROXY` with the hostname or IP address of the proxy server. _Note:_ `HTTPS_PROXY` takes precedence over `HTTP_PROXY` for https requests. Qlik CLI supports only Basic Authentication.
