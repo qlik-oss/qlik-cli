@@ -1,5 +1,37 @@
 # Changelog
 
+## 2.6.0
+
+- New: Added `qlik edit` command - you can now easily update resources without worrying about 
+the complicated JSON Patch calculations, based on the `EDITOR` environment variable, the edit 
+command will start automatically your preferred editor and once you changes are saved, will 
+do all the PUT/PATCH work for you.
+
+    *If you want to see communication details for your edit call you can use the `--verbose` 
+    flag. This will display all HTTP operations that are performed including payloads for requests.*
+
+    example:
+    ```bash
+    qlik webhook edit <webhookId>
+    # this command will launch your preferred editor containing the resource in json format
+    # changing for example the description parameter and save will be the equivalent of doing 
+    # a patch with payload:
+    # [
+    #   {
+    #       "op": "replace",
+    #       "path": "/description",
+    #       "value": "my new description"
+    #   }
+    # ]
+    ```
+
+- New: Added `qlik spec get` provides more detailed information about added external specs, most notably the path to the added specification.
+
+- New: The auto-generated usage documentation now get automatically published to https://qlik.dev/libraries-and-tools/qlik-cli upon new releases.
+
+- Fix: Improved robustness in handling of array subtypes - missing types will now return errors. Any included schema is thus required to have proper types defined. Previously, we defaulted to string if the type was missing.
+
+
 ## 2.5.1
 
 - Fix: YAML-spec support
