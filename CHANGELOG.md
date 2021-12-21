@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.7.0
+
+- New: Added flags to `qlik app ls`. Some of the things that can be controlled with the flags are
+include only apps for a specific user or exclude apps for a specific user and control sort order.
+
+    example:
+    ```bash
+    # created by user, latest first
+    qlik app ls --createdByUserId <user-id> --sort -createdAt
+    # not created by user, oldest first
+    qlik app ls --notCreatedByUserId <user-id> --sort +createdAt
+    ```
+
+- Fix: Improved handling of allOf-schemas and get latest reload spec.
+
 ## 2.6.0
 
 - New: Added `qlik edit` command - you can now easily update resources without worrying about 
