@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.8.0
+
+- New: `qlik spec get <api-spec>` has been improved to show more information about added specifications. It will now show a complete, detailed list of commands added from the specification. This can give insight into how the API specifications are interpreted.
+
+- New: For commands that send arrays of JSON-objects the description on how to do so will be more descriptive and verbose - explaining what fields the objects contain. The flag descriptions also
+wrap to about 80 characters in width (in most cases). Check out `qlik license assignment add` for an example.
+
+- Fix: Resolved an issue that caused the `qlik app ls` command to not be displayed correctly in help and auto-completion.
+
+- Fix: The `qlik update` command on Windows has been fixed. There was an issue with updating the running binary that is now handled.
+
+- Fix: Some arguments contain leading hyphens which cause the arguments to be interpreted as flags. In most of these cases, a text explaining how this can be prevented with the use of double-dashes will appear. (For example: `qlik app get -- -my-app`)
+
 ## 2.7.0
 
 - New: Added flags to `qlik app ls`. Some of the things that can be controlled with the flags are
