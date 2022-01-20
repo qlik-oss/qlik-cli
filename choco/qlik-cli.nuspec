@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.7.0</version>
+    <version>2.8.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -10,23 +10,19 @@
     <projectUrl>https://github.com/qlik-oss/qlik-cli</projectUrl>
     <iconUrl>https://qlik-oss.github.io/qlik-cli.github.io/icons/qlik-cli.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>qlik is a Command Line Interface for Qlik Sense SaaS.
+    <description>qlik is a Command Line Interface for Qlik Cloud.
 
 It gives you access to most public APIs which enables you to administrate your tenant and apps,
 develop and manage apps, migrate data and much more.</description>
-    <summary>qlik is a tool for working with any of Qlik Sense SaaS</summary>
+    <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-- New: Added flags to `qlik app ls`. Some of the things that can be controlled with the flags are
-include only apps for a specific user or exclude apps for a specific user and control sort order.
-    example:
-    ```bash
-    # created by user, latest first
-    qlik app ls --createdByUserId &lt;user-id&gt; --sort -createdAt
-    # not created by user, oldest first
-    qlik app ls --notCreatedByUserId &lt;user-id&gt; --sort +createdAt
-    ```
-- Fix: Improved handling of allOf-schemas and get latest reload spec.</releaseNotes>
+- New: `qlik spec get &lt;api-spec&gt;` has been improved to show more information about added specifications. It will now show a complete, detailed list of commands added from the specification. This can give insight into how the API specifications are interpreted.
+- New: For commands that send arrays of JSON-objects the description on how to do so will be more descriptive and verbose - explaining what fields the objects contain. The flag descriptions also
+wrap to about 80 characters in width (in most cases). Check out `qlik license assignment add` for an example.
+- Fix: Resolved an issue that caused the `qlik app ls` command to not be displayed correctly in help and auto-completion.
+- Fix: The `qlik update` command on Windows has been fixed. There was an issue with updating the running binary that is now handled.
+- Fix: Some arguments contain leading hyphens which cause the arguments to be interpreted as flags. In most of these cases, a text explaining how this can be prevented with the use of double-dashes will appear. (For example: `qlik app get -- -my-app`)</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
