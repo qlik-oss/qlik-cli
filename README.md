@@ -28,10 +28,42 @@ Just like that. :beers:
 
 ### Chocolatey (Windows)
 
-Installation on Windows via package manager is not currently available. You can download the [Windows executable](https://github.com/qlik-oss/qlik-cli/releases).
+Want to install using Chocolatey? Then simply type:
+
+```bash
+choco install qlik-cli
+```
+
+If you need or want to upgrade qlik-cli using chocolatey:
+```bash
+choco upgrade qlik-cli
+```
+
+And you're up to date.
+
+#### Choco upgrade fail
+If you see an error like:
+```
+Error retrieving packages from source 'https://www.nuget.org/api/v2':
+ The combination of parameters provided to this OData endpoint is no longer supported. Please refer to the following URL for more information about this deprecation: https://aka.ms/nuget/odata-deprecation
+
+```
+Then first run:
+```
+choco source list
+```
+Then remove the one matching nuget.org:
+```
+choco source rm --name=nuget.org
+```
+
+Another way to fix a failing upgrade is to uninstall and reinstall.
+```bash
+choco uninstall qlik-cli
+choco install qlik-cli
+```
 
 **Note:** Check out the [Completion for Powershell](#completion-for-powershell) section if you're interested in how to set up Powershell completion.
-
 ### General
 
 If you prefer not using any of the package managers above you can go to our [releases](https://github.com/qlik-oss/qlik-cli/releases) and choose one suitable for your OS.
