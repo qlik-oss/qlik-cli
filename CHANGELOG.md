@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.9.0
+
+- Improvement: The verbose logging for HTTP requests, accessible through the flag `--verbose` or `-v`, is now enhanced to include information about the connections being made. The new logs concering connections are prefixed with an asterisk.
+
 ## 2.8.0
 
 - New: `qlik spec get <api-spec>` has been improved to show more information about added specifications. It will now show a complete, detailed list of commands added from the specification. This can give insight into how the API specifications are interpreted.
