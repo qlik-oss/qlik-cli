@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.8.0</version>
+    <version>2.9.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,12 +17,7 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-- New: `qlik spec get &lt;api-spec&gt;` has been improved to show more information about added specifications. It will now show a complete, detailed list of commands added from the specification. This can give insight into how the API specifications are interpreted.
-- New: For commands that send arrays of JSON-objects the description on how to do so will be more descriptive and verbose - explaining what fields the objects contain. The flag descriptions also
-wrap to about 80 characters in width (in most cases). Check out `qlik license assignment add` for an example.
-- Fix: Resolved an issue that caused the `qlik app ls` command to not be displayed correctly in help and auto-completion.
-- Fix: The `qlik update` command on Windows has been fixed. There was an issue with updating the running binary that is now handled.
-- Fix: Some arguments contain leading hyphens which cause the arguments to be interpreted as flags. In most of these cases, a text explaining how this can be prevented with the use of double-dashes will appear. (For example: `qlik app get -- -my-app`)</releaseNotes>
+- Improvement: The verbose logging for HTTP requests, accessible through the flag `--verbose` or `-v`, is now enhanced to include information about the connections being made. The new logs concering connections are prefixed with an asterisk.</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
