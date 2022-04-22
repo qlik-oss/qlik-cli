@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.10.1
+
+- Improvement: More network logs! Now the `--verbose` flag will properly display network information related to the establishing of websockets. Previously, this only applied to pure HTTP-requests.
+
+- Fix: Websocket specific flags will now be properly displayed for websocket-based commands. Note: as part of this work some flags that were previously present, but hidden, on the root command are now only present where they are useful. Scripts using a blanket-set of undocumented flags may need updating.
+
+- Fix: Updated descriptions for edit commands. The descriptions will state clearly which editor will be opened upon command execution and how the editor is chosen.
+
+- Improvement: Support for query-parameters of type array.
+
+- Fix: More robust handling of server-types.
+
+- Fix: Minor improvements to multipart request handling.
+
+- Fix: Added `--quiet` flag to `bookmark ls` command.
+
 ## 2.9.0
 
 - Improvement: The verbose logging for HTTP requests, accessible through the flag `--verbose` or `-v`, is now enhanced to include information about the connections being made. The new logs concering connections are prefixed with an asterisk.
