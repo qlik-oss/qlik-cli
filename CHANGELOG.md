@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.11.0
+
+- New: Added commands for data files management. Data files are files that are stored, and can be read, in the context of a Qlik Cloud space. For more details please run `qlik data-file`
+
 ## 2.10.1
 
 - Improvement: More network logs! Now the `--verbose` flag will properly display network information related to the establishing of websockets. Previously, this only applied to pure HTTP-requests.
