@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.11.1
+- Fix: CI pipeline release
+
 ## 2.11.0
 
 - New: Added commands for data files management. Data files are files that are stored, and can be read, in the context of a Qlik Cloud space. For more details please run `qlik data-file`
