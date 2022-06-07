@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.12.0
+- Fix: Updated the included QCS API-specifications
+
 ## 2.11.1
 - Fix: CI pipeline release
 
