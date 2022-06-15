@@ -1,9 +1,16 @@
 # Changelog
 
+## 2.13.0
+
+- Fix: Added qlik-cli to User-Agent header
+- Fix: Creating IdP fo type JWTAuth now works: `identity-provider create jwtauth`
+
 ## 2.12.0
+
 - Fix: Updated the included QCS API-specifications
 
 ## 2.11.1
+
 - Fix: CI pipeline release
 
 ## 2.11.0
@@ -49,6 +56,7 @@ wrap to about 80 characters in width (in most cases). Check out `qlik license as
 include only apps for a specific user or exclude apps for a specific user and control sort order.
 
     example:
+
     ```bash
     # created by user, latest first
     qlik app ls --createdByUserId <user-id> --sort -createdAt
@@ -60,15 +68,16 @@ include only apps for a specific user or exclude apps for a specific user and co
 
 ## 2.6.0
 
-- New: Added `qlik edit` command - you can now easily update resources without worrying about 
-the complicated JSON Patch calculations, based on the `EDITOR` environment variable, the edit 
-command will start automatically your preferred editor and once you changes are saved, will 
+- New: Added `qlik edit` command - you can now easily update resources without worrying about
+the complicated JSON Patch calculations, based on the `EDITOR` environment variable, the edit
+command will start automatically your preferred editor and once you changes are saved, will
 do all the PUT/PATCH work for you.
 
-    *If you want to see communication details for your edit call you can use the `--verbose` 
+    *If you want to see communication details for your edit call you can use the `--verbose`
     flag. This will display all HTTP operations that are performed including payloads for requests.*
 
     example:
+
     ```bash
     qlik webhook edit <webhookId>
     # this command will launch your preferred editor containing the resource in json format
@@ -85,10 +94,9 @@ do all the PUT/PATCH work for you.
 
 - New: Added `qlik spec get` provides more detailed information about added external specs, most notably the path to the added specification.
 
-- New: The auto-generated usage documentation now get automatically published to https://qlik.dev/libraries-and-tools/qlik-cli upon new releases.
+- New: The auto-generated usage documentation now get automatically published to <https://qlik.dev/libraries-and-tools/qlik-cli> upon new releases.
 
 - Fix: Improved robustness in handling of array subtypes - missing types will now return errors. Any included schema is thus required to have proper types defined. Previously, we defaulted to string if the type was missing.
-
 
 ## 2.5.1
 
@@ -96,16 +104,18 @@ do all the PUT/PATCH work for you.
 
 ## 2.5.0
 
-- New: Added support for outbound proxy: you can now set the operating system environment variables called `HTTPS_PROXY/HTTP_PROXY` with the hostname or IP address of the proxy server. _Note:_ `HTTPS_PROXY` takes precedence over `HTTP_PROXY` for https requests. Qlik CLI supports only Basic Authentication.
+- New: Added support for outbound proxy: you can now set the operating system environment variables called `HTTPS_PROXY/HTTP_PROXY` with the hostname or IP address of the proxy server. *Note:* `HTTPS_PROXY` takes precedence over `HTTP_PROXY` for https requests. Qlik CLI supports only Basic Authentication.
 
 - Fix: Improve --limit flag descriptions
 
 - Fix: Updated the included QCS API-specifications
 
 ## 2.4.2
+
 - Fix: CI pipeline release
 
 ## 2.4.1
+
 - Fix: CI pipeline release
 
 ## 2.4.0
@@ -124,10 +134,10 @@ do all the PUT/PATCH work for you.
 
 - Fix: Various small improvements and bugfixes.
 
-
 ## 2.3.1
 
 - Fix: CI pipeline release
+
 ## 2.3.0
 
 - New: adding support for the `identity-providers` endpoint
@@ -141,16 +151,16 @@ do all the PUT/PATCH work for you.
 ## 2.2.2
 
 - Fix: Various small improvements and bugfixes.
+
 ## 2.2.1
 
 - Fix: Piped input is not supported for Mingw64. Piped input is therefore not supported for the Git BASH for Windows terminal since it uses Mingw64, skip stdin input for Mingw64.
 
 - Fix: Various small improvements and bugfixes.
 
-
 ## 2.2.0
 
-- New: You can now upload large apps to SaaS tenants using qlik-cli using the `qlik app import` command. Use the `--resumable` switch to instruct the cli to handle the upload in chunks which can be resumed if needed. 
+- New: You can now upload large apps to SaaS tenants using qlik-cli using the `qlik app import` command. Use the `--resumable` switch to instruct the cli to handle the upload in chunks which can be resumed if needed.
 When you upload an app using qlik-cli, a nice animated bar appears displaying
 the progress.
 
@@ -160,11 +170,11 @@ as the input of the next command you issue.
 - New: Aliases enable you to create shorthand commands for hard to remember long commands. For example, say you run a command frequently to find the guid of an application in your tenant, `qlik item ls --resourceType app --name`. You can use the alias command to create a shortcut it into something like `qlik getAppGuid consumer+sales`. This returns the complete JSON object for the consumer+sales resource in the items collection.
 
     Another example:
+
     ```bash
     qlik alias add my-apps item ls --ownerId=$(qlik user me -q) --resourceType=app
     # Simply calling qlik my-apps will then give you the desired list.
     ```
-
 
 - New: The `--limit` switch enables you to return a number of app resource objects per page ranging from 1 to 100.
 
@@ -173,7 +183,6 @@ as the input of the next command you issue.
 - Fix: Use of the temporary upload service in qlik-cli caused problems with large app uploads and resumability. This problem has been fixed and implemented through the resumable switch in the `qlik app import` command.
 
 - Fix: In prior CLI versions, `qlik reload get` was not sending a correct response. This issue has been resolved.
-
 
 ## 2.1.0
 
@@ -196,6 +205,7 @@ feedback. A handy command for automating devops of Qlik Sense apps.
     qlik api-key ls --sub="test"
     "Flag --sub has been deprecated, please don't use it!"
     ```
+
 - New: You can now add names to external specifications you add into qlik-cli.
 Here's an example: `qlik spec add ./my-spec.json --name foo`
 
@@ -276,6 +286,7 @@ from the Apps API.
     qlik item ls --resourceId $app --resourceType app
     #returns item information formerly seen in the old response
     ```
+
 - Fix: a security enhancement has been made to remove session Ids from log messages
 - Fix: fixed a bug with `qlik app ls` returning non-app resources.
 - Fix: fixed `qlik qrs task start by-id` which failed with `no such operation`
@@ -285,10 +296,13 @@ from the Apps API.
 ## 1.7.0/1.7.1
 
 - New: adding partial reload capability to qlik app reload
+
     ```bash
     qlik app reload --app <myapp> --partial
     ```
+
 - New: support for renaming a context
+
     ```bash
     qlik context rename [flags]
     ```
@@ -313,11 +327,13 @@ from the Apps API.
 ## 1.4.0
 
 - Breaking: new standard renaming arguments and flags called only `id`, these will now be exposed as <resource>Id instead.
+
     ```bash
     qlik extension file get <filepath> -id <extensionId>
     # should now be
     qlik extension file get <filepath> -extensionId <extensionId>
     ```
+
 - Fix: adding limits `(default, max and min)` to the parameter description if present in the specification.
 - Fix: operations with unsupported content-types are now detected and, when used, will throw an error message ex: `unsupported content-type <content-type>`
 - Fix: updating latest specs
@@ -325,10 +341,12 @@ from the Apps API.
 ## 1.3.0/1.3.1
 
 - New: commands for publishing/unpublishing generic objects ex: make sheet public
+
     ```bash
     qlik app object publish <object-id> [flags]
     qlik app object unpublish OBJECT-ID -a APP-ID
     ```
+
 - New: `--retry` and `--interval` flags which are used to set the number of retries and with what interval they should be done.
 - Fix: detect parameter collisions in order to avoid inevitable panic.
 
