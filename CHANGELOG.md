@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.14.3
+
+- New: Commands have been updated to reflect the latest API changes.
+
+- New: OAuth 2.0 machine-to-machine support. Users are now able to authorize with Qlik Cloud SaaS over client credentials flow.
+
+- New: Added command for tenant creation.
+
+- New: Added commands for web-integrations management. Web-integrations enable users to manage whitelisted origins that can make requests to a specified tenant (CORS).
+
+- New: Added commands for groups and roles management.
+
 ## 2.13.0
 
 - Fix: Added qlik-cli to User-Agent header
