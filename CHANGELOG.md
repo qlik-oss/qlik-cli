@@ -1,5 +1,26 @@
 # Changelog
 
+## 2.15.0
+
+- New: adding support for the `automations` endpoint
+
+- Fix: Fail before request on missing path parameter
+    ```bash
+    qlik item update itemId --file ./my_file
+    # now output an explicit error message about required parameters
+    Error: required flag(s) "resourceType" not set
+    ```
+
+- Fix: correct output when using the `--json` for errors
+    ```bash
+    qlik extension get don_t_exists --json
+    # now outputs json ready to be parsed
+    {
+        "status": 404,
+        "title": "Not found"
+    }    
+    ```
+
 ## 2.14.3
 
 - New: Commands have been updated to reflect the latest API changes.
