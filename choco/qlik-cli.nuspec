@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.14.3</version>
+    <version>2.15.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,11 +17,22 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-- New: Commands have been updated to reflect the latest API changes.
-- New: OAuth 2.0 machine-to-machine support. Users are now able to authorize with Qlik Cloud SaaS over client credentials flow.
-- New: Added command for tenant creation.
-- New: Added commands for web-integrations management. Web-integrations enable users to manage whitelisted origins that can make requests to a specified tenant (CORS).
-- New: Added commands for groups and roles management.</releaseNotes>
+- New: adding support for the `automations` endpoint
+- Fix: Fail before request on missing path parameter
+    ```bash
+    qlik item update itemId --file ./my_file
+    # now output an explicit error message about required parameters
+    Error: required flag(s) "resourceType" not set
+    ```
+- Fix: correct output when using the `--json` for errors
+    ```bash
+    qlik extension get don_t_exists --json
+    # now outputs json ready to be parsed
+    {
+        "status": 404,
+        "title": "Not found"
+    }    
+    ```</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
