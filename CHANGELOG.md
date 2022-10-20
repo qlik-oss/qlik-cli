@@ -1,5 +1,15 @@
 # Changelog
 
+## 2.16.0
+
+- New: Sensitive credentials are now omitted when viewing a context in the terminal.
+- New: Updated commands, flags and description with latest API changes.
+- New: Global flags like e.g. `--insecure` can now be set when creating or updating a context.
+
+- Fix: Handle already encoded query parameters being passed to the `qlik raw` command.
+- Fix: Incorrect context was used for `qlik context login <context name>`.
+- Fix: Handling of empty pagination links that resulted in an error print when reaching the last page.
+
 ## 2.15.0
 
 - New: adding support for the `automations` endpoint
@@ -18,7 +28,7 @@
     {
         "status": 404,
         "title": "Not found"
-    }    
+    }
     ```
 
 ## 2.14.3
