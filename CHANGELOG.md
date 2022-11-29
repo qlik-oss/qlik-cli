@@ -1,5 +1,42 @@
 # Changelog
 
+## 2.17.0
+  
+- New: added support for OAuth in context init command
+
+```bash
+> qlik context init
+Acquiring access to Qlik Cloud
+
+Specify your tenant URL, usually in the form: https://<tenant>.<region>.qlikcloud.com
+Where <tenant> is the name of the tenant and <region> is eu, us, ap, etc...
+Enter tenant url: my-tenant.eu.qlikcloud.com
+Specify what type of authentication that should be used i.e API-Key (A) or OAuth (O). Default is API-Key (A).
+A/O?: o
+
+To complete this setup you have to have a Client ID and Client Secret for OAuth.
+If you are unsure, you can ask your tenant-admin or go to https://qlik.dev/libraries-and-tools/qlik-cli#get-started.
+
+Client ID: my-client-id
+
+
+Client Secret:
+```
+
+- Fix: updated resources to latest version of Qlik Cloud and filtered out  experimental commands (breaking)
+
+- Fix: do not enable tracing when using --json flag
+
+- Fix: add description of parameters in flag desc
+
+- Fix: `qlik data-files create --file` now works, previously the flag was overridden by the description flag
+
+  
+
+
+
+
+
 ## 2.16.0
 
 - New: Sensitive credentials are now omitted when viewing a context in the terminal.
