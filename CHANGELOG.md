@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.17.1
+
+- Fix: deprecated in desc `catwalk` command
+
 ## 2.17.0
   
 - New: added support for OAuth in context init command
@@ -31,12 +35,6 @@ Client Secret:
 
 - Fix: `qlik data-files create --file` now works, previously the flag was overridden by the description flag
 
-  
-
-
-
-
-
 ## 2.16.0
 
 - New: Sensitive credentials are now omitted when viewing a context in the terminal.
@@ -52,6 +50,7 @@ Client Secret:
 - New: adding support for the `automations` endpoint
 
 - Fix: Fail before request on missing path parameter
+
     ```bash
     qlik item update itemId --file ./my_file
     # now output an explicit error message about required parameters
@@ -59,6 +58,7 @@ Client Secret:
     ```
 
 - Fix: correct output when using the `--json` for errors
+
     ```bash
     qlik extension get don_t_exists --json
     # now outputs json ready to be parsed
