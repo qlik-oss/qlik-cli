@@ -1,11 +1,22 @@
 # Changelog
 
+## 2.18.0
+
+- feat: new command added oauth-token
+
+```bash
+qlik oauth-token ls          # List OAuth tokens
+qlik oauth-token rm <token>  # Revoke an OAuth token by ID
+```
+
+- fix: deprecated commands are now properly handled
+
 ## 2.17.1
 
 - Fix: deprecated in desc `catwalk` command
 
 ## 2.17.0
-  
+
 - New: added support for OAuth in context init command
 
 ```bash
