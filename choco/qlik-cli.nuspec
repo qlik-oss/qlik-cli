@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.17.1</version>
+    <version>2.18.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,7 +17,12 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-- Fix: deprecated in desc `catwalk` command</releaseNotes>
+- feat: new command added oauth-token
+```bash
+qlik oauth-token ls          # List OAuth tokens
+qlik oauth-token rm &lt;token&gt;  # Revoke an OAuth token by ID
+```
+- fix: deprecated commands are now properly handled</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
