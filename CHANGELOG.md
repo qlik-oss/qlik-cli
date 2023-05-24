@@ -1,5 +1,56 @@
 # Changelog
 
+## 2.20.3
+
+fix: path to OpenSSL config was incorrect
+
+## 2.20.2
+
+fix: use legacy providers in OpenSSL conf for signing of windows executable
+
+## 2.20.1
+
+fix: use legacy option for signing of binary with OpenSSL 3.0
+
+## 2.20.0
+
+feat: add `qlik app insight-analyse` command for Insight Advisor analyses. Documentation for the API can be found [here](https://qlik.dev/apis/rest/apps#%23%2Fentries%2Fv1%2Fapps%2F-appId%2Finsight-analyses-get)
+
+feat: add command for changing owner of an object. Documentation for the API can be found [here](https://qlik.dev/changelog/2023-05-09-2)
+
+```bash
+# Change owner for a specific object
+qlik app object change-owner --appId <app-id> --objectId <object-id> --ownerId <owner-id>
+```
+
+feat: add `publish` & `unpublish` commands for Bookmarks, Dimensions and Measures.
+
+```bash
+# Publish a bookmark
+qlik app bookmark publish <bookmark-id> --app <app-id>
+
+# Unpublish a bookmark
+qlik app bookmark unpublish <bookmark-id> --app <app-id>
+
+# Publish a dimension
+qlik app dimension publish <dimension-id> --app <app-id>
+
+# Unpublish a dimension
+qlik app dimension unpublish <dimension-id> --app <app-id>
+
+# Publish a measure
+qlik app measure publish <measure-id> --app <app-id>
+
+# Unpublish a measure
+qlik app measure unpublish <measure-id> --app <app-id>
+```
+
+fix: `qlik context` commands are no longer `experimental`.
+
+fix: `qlik-cli` is now based on Golang v1.20.4 to resolve security vulnerabilities.
+
+fix: add missing body parameters for `qlik qrs` commands. Issue reported on qlik-oss [here](https://github.com/qlik-oss/qlik-cli/issues/32)
+
 ## 2.19.0
 
 feat: commands for managing script versions in an app
@@ -446,7 +497,7 @@ from the Apps API.
 ## 1.5.0
 
 - New: experimental support for the QRS API in Qlik Sense for Windows.
-- New: - `--server-type` flag: the type of server you are using: cloud (SaaS), windows (Enterprise on Windows) or engine
+- New: - `--server-type` flag: the type of server you are using: cloud (SaaS), Windows (Enterprise on Windows) or engine
 - Fix: adds sorting to the body parameters for multipart, earlier `data` and `file` could be returned in random order.
 - Fix: minor bug-fixes and release pruning
 
