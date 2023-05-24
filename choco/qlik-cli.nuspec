@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.19.0</version>
+    <version>2.20.3</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,28 +17,7 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-feat: commands for managing script versions in an app
-```bash
-# List script versions in an app
-qlik app script version ls --appId=&lt;appId&gt;
-# Create a version of a script
-qlik app script version create --versionMessage="Version1" --script="Load RecNo() as N autogenerate(100);" --appId=&lt;appId&gt;
-# Get the current version of a script
-qlik app script version get current --appId=&lt;appId&gt;
-# Get a specific version of a script. The scriptId is returned when listing script versions.
-qlik app script version get &lt;scriptId&gt; --appId=&lt;appId&gt;
-# Remove a specific version of a script
-qlik app script version rm &lt;scriptId&gt; --appId=&lt;appId&gt;
-```
-feat: additional support for rows and json output for the `qlik app eval` command.
-```bash
-# By default the eval command will only return maximum 20 rows of data
-qlik app eval &lt;expression&gt; --app=&lt;appId&gt;
-# If additional data is wanted the number of rows can now be specified using the --rows parameter
-qlik app eval &lt;expression&gt; --rows=5000 --appId=&lt;appId&gt;
-# It is also possible to get the hypercube data pages in raw json
-qlik app eval &lt;expression&gt; --rows=5000 --appId=&lt;appId&gt; --json
-```</releaseNotes>
+fix: path to OpenSSL config was incorrect</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/libraries-and-tools/qlik-cli</docsUrl>
