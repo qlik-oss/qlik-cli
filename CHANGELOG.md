@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.20.4
+
+fix: docsUrl patch for package published to choco
+
 ## 2.20.3
 
 fix: path to OpenSSL config was incorrect
