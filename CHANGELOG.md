@@ -1,5 +1,42 @@
 # Changelog
 
+## 2.21.0
+
+- feat: intake for note settings
+
+```bash
+qlik note settings update --toggledOn=true
+```
+
+- feat: intake of the transports API
+
+```bash
+qlik transport email-config ls # list email configuration settings
+qlik transport email-config validate # validate the config
+```
+
+- feat: teanants API - updates
+
+```bash
+qlik tenant me # get current tenant information
+qlik tenant patch <tenantId> 
+```
+
+- fix: make tcs default in data-file create and update by making resumable flag default true
+
+```bash
+# to set resumable to false
+qlik data-file create  --name <fileName> --file <filePath>  --resumable=false
+```
+
+- docs: explain quotes in body for windows
+
+- fix: remove deprecated app-evaluator endpoint
+- fix: consitentcy in the data-file command now update use tcs like data-file create
+- fix: check if context already exists in init command
+- fix: handle request bodies with a body property
+- fix: fallback to default if resumable is not supported due to stdin
+
 ## 2.20.4
 
 fix: docsUrl patch for package published to choco
