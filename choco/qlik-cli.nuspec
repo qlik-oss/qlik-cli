@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.20.4</version>
+    <version>2.21.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,7 +17,31 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-fix: docsUrl patch for package published to choco</releaseNotes>
+- feat: intake for note settings
+```bash
+qlik note settings update --toggledOn=true
+```
+- feat: intake of the transports API
+```bash
+qlik transport email-config ls # list email configuration settings
+qlik transport email-config validate # validate the config
+```
+- feat: teanants API - updates
+```bash
+qlik tenant me # get current tenant information
+qlik tenant patch &lt;tenantId&gt; 
+```
+- fix: make tcs default in data-file create and update by making resumable flag default true
+```bash
+# to set resumable to false
+qlik data-file create  --name &lt;fileName&gt; --file &lt;filePath&gt;  --resumable=false
+```
+- docs: explain quotes in body for windows
+- fix: remove deprecated app-evaluator endpoint
+- fix: consitentcy in the data-file command now update use tcs like data-file create
+- fix: check if context already exists in init command
+- fix: handle request bodies with a body property
+- fix: fallback to default if resumable is not supported due to stdin</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
