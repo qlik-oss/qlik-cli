@@ -1,5 +1,39 @@
 # Changelog
 
+## 2.22.0
+
+- feat: Intake of the brands API
+
+This API allows you to manage the branding of a tenant, for example custom logos and favicons.
+For example, creating a brand with logo and favicon and then activating it looks like this:
+
+```bash
+qlik brand create --name=<name> --file-logo=<logo.png> --file-favIcon=<icon.ico>
+qlik brand activate <brand-id>
+```
+
+- feat: Intake of group-create
+
+We've now added a command for creating groups which is useful for managing access control for
+multiple users at the same time.
+For example, you can create a group called developers with the "Developer" role.
+
+```bash
+qlik group create --name=developers --assignedRoles='[{"name":"Developer"}]'
+```
+
+You can get a complete list of roles from `qlik role ls` and `--assignedRoles` can use either
+an id or a name of a role.
+
+- feat: Tenant-edit command
+
+At long last the tenant-edit command is here, letting you update your tenant-configuration
+in your command-line-editor of choice!
+
+- docs: Edit-commands are no longer experimental
+- docs: The identity-provider commands are no longer experimental
+- fix: Bug when providing required body parameters from a file using the `--file` flag.
+
 ## 2.21.0
 
 - feat: intake for note settings
