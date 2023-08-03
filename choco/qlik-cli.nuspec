@@ -1,15 +1,15 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.21.0</version>
+    <version>2.22.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/qlik-oss/qlik-cli/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/qlik-oss/qlik-cli</projectUrl>
     <iconUrl>https://qlik-oss.github.io/qlik-cli.github.io/icons/qlik-cli.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>qlik is a Command Line Interface for Qlik Cloud.
 
 It gives you access to most public APIs which enables you to administrate your tenant and apps,
@@ -17,31 +17,28 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-- feat: intake for note settings
+- feat: Intake of the brands API
+This API allows you to manage the branding of a tenant, for example custom logos and favicons.
+For example, creating a brand with logo and favicon and then activating it looks like this:
 ```bash
-qlik note settings update --toggledOn=true
+qlik brand create --name=&lt;name&gt; --file-logo=&lt;logo.png&gt; --file-favIcon=&lt;icon.ico&gt;
+qlik brand activate &lt;brand-id&gt;
 ```
-- feat: intake of the transports API
+- feat: Intake of group-create
+We've now added a command for creating groups which is useful for managing access control for
+multiple users at the same time.
+For example, you can create a group called developers with the "Developer" role.
 ```bash
-qlik transport email-config ls # list email configuration settings
-qlik transport email-config validate # validate the config
+qlik group create --name=developers --assignedRoles='[{"name":"Developer"}]'
 ```
-- feat: teanants API - updates
-```bash
-qlik tenant me # get current tenant information
-qlik tenant patch &lt;tenantId&gt; 
-```
-- fix: make tcs default in data-file create and update by making resumable flag default true
-```bash
-# to set resumable to false
-qlik data-file create  --name &lt;fileName&gt; --file &lt;filePath&gt;  --resumable=false
-```
-- docs: explain quotes in body for windows
-- fix: remove deprecated app-evaluator endpoint
-- fix: consitentcy in the data-file command now update use tcs like data-file create
-- fix: check if context already exists in init command
-- fix: handle request bodies with a body property
-- fix: fallback to default if resumable is not supported due to stdin</releaseNotes>
+You can get a complete list of roles from `qlik role ls` and `--assignedRoles` can use either
+an id or a name of a role.
+- feat: Tenant-edit command
+At long last the tenant-edit command is here, letting you update your tenant-configuration
+in your command-line-editor of choice!
+- docs: Edit-commands are no longer experimental
+- docs: The identity-provider commands are no longer experimental
+- fix: Bug when providing required body parameters from a file using the `--file` flag.</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
