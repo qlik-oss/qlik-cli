@@ -1,5 +1,19 @@
 # Changelog
 
+## 2.23.0
+
+- feat: Intake tenant deactivate and reactivate
+```bash
+qlik tenant deactivate ‹tenantId›
+qlik tenant reactivate ‹tenantId›
+```
+
+- chore: update to go 1.20.7
+- fix: skip body flag for edit commands
+- fix: remove context on failing context init
+- feat: adding custom completion for alias update 
+- fix: prune inapplicable flags from commands
+
 ## 2.22.0
 
 - feat: Intake of the brands API
