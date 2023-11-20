@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.24.0
+
+- feat: New glossary command
+
+The business-glossary API allows you to standardize terms and definitions.
+
+See the new command:
+
+```
+qlik glossary
+```
+
 ## 2.23.0
 
 - feat: Intake tenant deactivate and reactivate
@@ -11,7 +23,7 @@ qlik tenant reactivate ‹tenantId›
 - chore: update to go 1.20.7
 - fix: skip body flag for edit commands
 - fix: remove context on failing context init
-- feat: adding custom completion for alias update 
+- feat: adding custom completion for alias update
 - fix: prune inapplicable flags from commands
 
 ## 2.22.0
