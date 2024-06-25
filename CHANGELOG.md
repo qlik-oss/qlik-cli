@@ -1,5 +1,45 @@
 # Changelog
 
+## 2.25.0
+
+- feat: New OAuth-client command-category
+
+The oauth-client API allows you to create more modes of authentication which can be very
+useful for automating tasks or, through qlik-embed, embedding content.
+
+Examine the new commands under:
+```bash
+qlik oauth-client
+```
+
+For more information about OAuth-clients go to [help.qlik.com](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-create-oauth-client.htm).
+
+- feat: New automation-connections command
+
+Automations allow you to chain tasks and easily integrate with external systems. Automation-connections
+represent the connections that you've made.
+
+You'll find the new commands under:
+```bash
+qlik automation-connections
+```
+
+- feat: Extract more app-properties on the `qlik app unbuild` command.
+
+- feat: CSRF-support for QSEoW
+
+In the near future there will be a security fix for QlikSense Enterprise on Windows making
+it a requirement to include a CSRF-token when establishing websocket connections. This adds
+a forwards-compatible fix for that.
+
+- fix: Minor description fixes
+
+- feat!: Removing csp-header command
+
+This endpoint has been deprecated and now removed from the help interface, although technically
+still usable to not break backwards compatability. An equivalent command is found at: `qlik csp-origin generate-header`
+
+
 ## 2.24.0
 
 - feat: New glossary command
