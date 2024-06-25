@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.24.0</version>
+    <version>2.25.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,12 +17,30 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-- feat: New glossary command
-The business-glossary API allows you to standardize terms and definitions.
-See the new command:
+- feat: New OAuth-client command-category
+The oauth-client API allows you to create more modes of authentication which can be very
+useful for automating tasks or, through qlik-embed, embedding content.
+Examine the new commands under:
+```bash
+qlik oauth-client
 ```
-qlik glossary
-```</releaseNotes>
+For more information about OAuth-clients go to [help.qlik.com](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-create-oauth-client.htm).
+- feat: New automation-connections command
+Automations allow you to chain tasks and easily integrate with external systems. Automation-connections
+represent the connections that you've made.
+You'll find the new commands under:
+```bash
+qlik automation-connections
+```
+- feat: Extract more app-properties on the `qlik app unbuild` command.
+- feat: CSRF-support for QSEoW
+In the near future there will be a security fix for QlikSense Enterprise on Windows making
+it a requirement to include a CSRF-token when establishing websocket connections. This adds
+a forwards-compatible fix for that.
+- fix: Minor description fixes
+- feat!: Removing csp-header command
+This endpoint has been deprecated and now removed from the help interface, although technically
+still usable to not break backwards compatability. An equivalent command is found at: `qlik csp-origin generate-header`</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
