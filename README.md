@@ -1,16 +1,14 @@
 # qlik-cli
 
-**qlik-cli**, known on the command line simply as `qlik`, is a CLI generated directly from API specifications. It allows you to do basically any task towards Qlik Sense SaaS leveraging all its public APIs.
+**qlik-cli**, known on the command line simply as `qlik`, is a CLI that simplifies leveraging Qlik public APIs.
 
-The project will be open-sourced in the near future. Until then however, this repo will serve as a placeholder and a mirror for releases.
+This repository serves as a placeholder and a mirror for releases.
 
-For more information you can go to:
- * https://qlik.dev/tutorials/get-started-with-qlik-cli
- * https://qlik.dev/libraries-and-tools/qlik-cli
+For more information, review the [qlik-cli documentation](https://qlik.dev/toolkits/qlik-cli/).
 
 ## Install
 
-After any installation, don't forget to add the [completion](#completion) as well, it is usually quite helpful when writing commands.
+After any installation, don't forget to add the [completion](#completion) as well, it is helpful when writing commands.
 
 ### Brew (Mac/Linux)
 
@@ -124,7 +122,6 @@ You can verify it by typing:
 ```
 qlik <tab>
 ```
-If you have any questions or ideas on what could/should be improved, just reach out to us!
 
 ## Third-party dependencies
 
