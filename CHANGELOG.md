@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.26.0
+
+- fix: Improve descriptions and update specs to reflect recent documentation improvements.
+
+- feat: Mark `collection change-visibility` as deprecated. The supported
+  method for change the visibility of a collection is to use `collection patch`,
+  for example:
+```
+qlik collection patch COLLECTION_ID --body='[{"op":"replace","path":"/type", "value": "publicgoverned"}]'
+```
+
+- fix: Rename flag `webhook ls --eventType` to `--eventTypes`
+This flag now takes multiple event-types separated by comma to support more precise queries.
+The old flag still works and is ported to the new one for backwards compatibility.
+
 ## 2.25.0
 
 - feat: New OAuth-client command-category
@@ -14,14 +29,14 @@ qlik oauth-client
 
 For more information about OAuth-clients go to [help.qlik.com](https://help.qlik.com/en-US/cloud-services/Subsystems/Hub/Content/Sense_Hub/Admin/mc-create-oauth-client.htm).
 
-- feat: New automation-connections command
+- feat: New automation-connection command
 
 Automations allow you to chain tasks and easily integrate with external systems. Automation-connections
-represent the connections that you've made.
+represent the connections that you've made to source systems.
 
 You'll find the new commands under:
 ```bash
-qlik automation-connections
+qlik automation-connection
 ```
 
 - feat: Extract more app-properties on the `qlik app unbuild` command.
@@ -34,10 +49,14 @@ a forwards-compatible fix for that.
 
 - fix: Minor description fixes
 
-- feat!: Removing csp-header command
+- feat: Removing csp-header command
 
 This endpoint has been deprecated and now removed from the help interface, although technically
 still usable to not break backwards compatability. An equivalent command is found at: `qlik csp-origin generate-header`
+
+- feat: Removing catwalk command
+
+This command was previously deprecated, and has now been removed.
 
 
 ## 2.24.0
