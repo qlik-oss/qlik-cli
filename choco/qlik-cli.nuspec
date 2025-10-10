@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.27.0</version>
+    <version>2.28.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,49 +17,28 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-This release includes a major revision of the internal generator which builds
-part of Qlik CLI based on our OpenAPI specifications.
-1. The set of commands available for Qlik CLI will match those 
-available on [qlik.dev](https://qlik.dev) much more closely.
-2. We have solved some technical limitations with mapping payload specifications to flags,
-meaning that virtually all properties of a payload are now settable as flags instead
-of plain JSON (which was the previous fallback). A common painpoint this addresses is
-`patch` operations, which usually take an array of JSON-objects.
-For example, you can now do:
-```
-qlik space patch SPACE_ID --op replace --path /description --value "New and improved!"
-```
-In this example, the `--op`, `--path` and `--value` flags can be used repeatedly and will
-then correspond with that property of the nth object. Meaning, a second `--op` flag would
-set the `.op` property of the second object.
-**Note**: The previous syntax using the `--body` flag is still supported.
-The following top-level commands have been added:
-- `qlik assistant` - Assistants provide a chat interface for asking questions and getting personalized, relevant answers for Qlik Answers.
-- `qlik condition` - Conditions are used by features such as data alerting and subscriptions to determine when action should be taken, based on data in a Qlik app.
-- `qlik data-alert` - Supports chart sharing, chart monitoring and alerting features. The legacy sharing APIs refer to chart sharing and chart monitoring, which is a feature that allows the user to send an e-mail with an embedded chart either manually (chart sharing) or in a recurring manner (chart monitoring). It also stores the history related to these actions. The alerting/ data-alerts APIs support the alerting feature, where a user is able to create alerts that trigger notifications in case a condition in the dataset of an app is fulfilled.
-- `qlik data-asset` - Data assets are part of the catalog in Qlik Cloud. A data asset is a member of a data store, and may contain multiple data sets.
-- `qlik data-connection` - Data connections are used by analytics apps and gateways to connect to external data sources. Credentials are stored in data-credentials.
-- `qlik data-credential` - Data credentials are the stored credentials leveraged by the data-connections service to connect to external data sources.
-- `qlik data-quality` - API for triggering data quality computations and retrieving global results to assess the quality of your datasets.
-- `qlik data-set` - Data sets are part of the catalog in Qlik Cloud. A data set is a member of a data asset.
-- `qlik data-source` - Lists data sources available on the tenant for the creation of analytics data connections.
-- `qlik data-store` - Data stores are part of the catalog in Qlik Cloud. A data store may contain one or more data stores, which in turn may contain multiple data sets.
-- `qlik di-project` - Data integration projects are containers for data tasks and provide the context for building, monitoring, and controlling data integration pipelines.
-- `qlik encryption` - Tenants in Qlik Cloud can be encrypted with a key you provide via a supported KMS. This API allows you to configure and manage encryption keys.
-- `qlik knowledgebase` - Knowledgebases are collections of individual data sources, that are indexed for use in generating responses to user questions via Assistants for Qlik Answers.
-- `qlik ml` - The Machine Learning API allows you to generate profile insights to analyze datasets, create and manage machine learning experiments, deploy models, and run predictions.
-- `qlik notification` - Notifications is the resource representing the various notifications that notification-prep can render
-- `qlik report` - Reports are downloadable assets generated from data in analytics applications.
-- `qlik report-template` - Create and manage report-templates
-- `qlik sharing-task` - For scheduled capabilities such as reports, data alerts, subscriptions, and more, sharing tasks defines when these tasks execute, and tie together the resource definition with any conditions on execution.
-- `qlik task` - API for managing tasks and task chains in Qlik Cloud. The requesting user needs the "reload" permission on the target resource to use this set of endpoints. A tenant admin can use GET /v1/tasks and DELETE /v1/tasks/{id} to perform administrative actions, even without the "reload" permission.
-- `qlik ui-config` - Pinned links are administrator-defined URLs which appear for all users under the More button in the global navigation menu.
-- `qlik web-notification` - Web notifications is the resource representing a user's notification
-The following unused commands have been removed:
-- `qlik data-file space-stats`
-- `qlik identity-provider auth-secrets`
-- `qlik note settings create` - Use `qlik note settings update` (or `edit`) instead.
-- `qlik user metadata` - Underlying endpoint removed, use `qlik role ls` instead.</releaseNotes>
+This release includes a few bug-fixes, minor improvements and additions.
+- Fixes an issue with the missing release version.
+- Fixes so that flags can handle multiple types.
+- Fixes an issue where a certain number of values for a flag caused a crash.
+- Verbose network logs now show the query parameters decoded.
+The following commands have been added:
+- qlik automation change-owner
+- qlik automation change-space
+- qlik data-source settings get
+- qlik data-source settings update
+- qlik di-project di-task runtime state-datasets
+- qlik direct-access-agent connector file ls
+- qlik direct-access-agent connector file allowed-paths get
+- qlik direct-access-agent connector file allowed-paths update
+- qlik direct-access-agent connector file custom-data-type-mappings get
+- qlik direct-access-agent connector file custom-data-type-mappings update
+- qlik direct-access-agent connector file update
+- qlik ml experiment recommend-models
+- qlik report output ls
+- qlik sharing-task execution ls
+- qlik sharing-task execution get
+- qlik sharing-task execution get-file</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
