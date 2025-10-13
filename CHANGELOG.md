@@ -1,5 +1,32 @@
 # Changelog
 
+## 2.28.0
+
+This release includes a few bug-fixes, minor improvements and additions.
+
+- Fixes an issue with the missing release version.
+- Fixes so that flags can handle multiple types.
+- Fixes an issue where a certain number of values for a flag caused a crash.
+- Verbose network logs now show the query parameters decoded.
+
+The following commands have been added:
+- qlik automation change-owner
+- qlik automation change-space
+- qlik data-source settings get
+- qlik data-source settings update
+- qlik di-project di-task runtime state-datasets
+- qlik direct-access-agent connector file ls
+- qlik direct-access-agent connector file allowed-paths get
+- qlik direct-access-agent connector file allowed-paths update
+- qlik direct-access-agent connector file custom-data-type-mappings get
+- qlik direct-access-agent connector file custom-data-type-mappings update
+- qlik direct-access-agent connector file update
+- qlik ml experiment recommend-models
+- qlik report output ls
+- qlik sharing-task execution ls
+- qlik sharing-task execution get
+- qlik sharing-task execution get-file
+
 ## 2.27.0
 
 This release includes a major revision of the internal generator which builds
