@@ -1,5 +1,18 @@
 # Changelog
 
+## 2.29.0
+
+This release includes bug-fixes, minor improvements and some new commands.
+
+- Fixes handling of content-types with a sub-type. Prior to the fix this caused issues with e.g. the `qlik report-filter ls` command.
+- Improved handling when adding new specifications using the `qlik spec` command.
+
+The following commands have been added:
+
+- `qlik automation-connector ls` - List available automation connectors.
+- `qlik banner ls` - List available tenant banners.
+- `qlik banner upsert` - Set a tenant banner.
+
 ## 2.28.0
 
 This release includes a few bug-fixes, minor improvements and additions.
