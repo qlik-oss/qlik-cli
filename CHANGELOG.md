@@ -1,5 +1,38 @@
 # Changelog
 
+## 2.30.0
+
+This release includes bug-fixes, security updates, and new commands.
+
+- Fixes cookie size overflow issue during pagination that could cause request failures.
+- Fixes context init command by removing outdated mention of developer role.
+- Updates go version to resolve security vulnerabilities (CVEs).
+
+The following commands have been added:
+
+- `qlik app validatescript` - Validate app scripts.
+- `qlik assistant search` - Search assistant resources.
+- `qlik di-project di-task request-reload` - Request reload for data integration tasks.
+- `qlik direct-access-agent benchmark` - Manage direct access agent benchmarks.
+- `qlik direct-access-agent benchmark cancel` - Cancel a benchmark.
+- `qlik direct-access-agent benchmark create` - Create a new benchmark.
+- `qlik direct-access-agent tool` - Direct access agent tool commands.
+- `qlik direct-access-agent tool metrics-collector` - Metrics collector tool commands.
+- `qlik direct-access-agent tool metrics-collector configuration` - Manage metrics collector configuration.
+- `qlik direct-access-agent tool metrics-collector configuration edit` - Edit metrics collector configuration.
+- `qlik direct-access-agent tool metrics-collector configuration ls` - List metrics collector configurations.
+- `qlik direct-access-agent tool metrics-collector configuration update` - Update metrics collector configuration.
+- `qlik knowledgebase search` - Search knowledgebase resources.
+- `qlik transport email-config update` - Update email configuration for transport.
+
+The following commands no longer supports the `--connectorType` flag,
+since they are only applicable to specific connectors:
+
+- `qlik direct-access-agent connector file custom-data-type-mappings get`
+- `qlik direct-access-agent connector file custom-data-type-mappings update`
+- `qlik direct-access-agent connector file allowed-paths get`
+- `qlik direct-access-agent connector file allowed-paths update`
+
 ## 2.29.0
 
 This release includes bug-fixes, minor improvements and some new commands.
