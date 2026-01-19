@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>2.29.0</version>
+    <version>2.30.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,13 +17,31 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-This release includes bug-fixes, minor improvements and some new commands.
-- Fixes handling of content-types with a sub-type. Prior to the fix this caused issues with e.g. the `qlik report-filter ls` command.
-- Improved handling when adding new specifications using the `qlik spec` command.
+This release includes bug-fixes, security updates, and new commands.
+- Fixes cookie size overflow issue during pagination that could cause request failures.
+- Fixes context init command by removing outdated mention of developer role.
+- Updates go version to resolve security vulnerabilities (CVEs).
 The following commands have been added:
-- `qlik automation-connector ls` - List available automation connectors.
-- `qlik banner ls` - List available tenant banners.
-- `qlik banner upsert` - Set a tenant banner.</releaseNotes>
+- `qlik app validatescript` - Validate app scripts.
+- `qlik assistant search` - Search assistant resources.
+- `qlik di-project di-task request-reload` - Request reload for data integration tasks.
+- `qlik direct-access-agent benchmark` - Manage direct access agent benchmarks.
+- `qlik direct-access-agent benchmark cancel` - Cancel a benchmark.
+- `qlik direct-access-agent benchmark create` - Create a new benchmark.
+- `qlik direct-access-agent tool` - Direct access agent tool commands.
+- `qlik direct-access-agent tool metrics-collector` - Metrics collector tool commands.
+- `qlik direct-access-agent tool metrics-collector configuration` - Manage metrics collector configuration.
+- `qlik direct-access-agent tool metrics-collector configuration edit` - Edit metrics collector configuration.
+- `qlik direct-access-agent tool metrics-collector configuration ls` - List metrics collector configurations.
+- `qlik direct-access-agent tool metrics-collector configuration update` - Update metrics collector configuration.
+- `qlik knowledgebase search` - Search knowledgebase resources.
+- `qlik transport email-config update` - Update email configuration for transport.
+The following commands no longer supports the `--connectorType` flag,
+since they are only applicable to specific connectors:
+- `qlik direct-access-agent connector file custom-data-type-mappings get`
+- `qlik direct-access-agent connector file custom-data-type-mappings update`
+- `qlik direct-access-agent connector file allowed-paths get`
+- `qlik direct-access-agent connector file allowed-paths update`</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
