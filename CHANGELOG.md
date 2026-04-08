@@ -1,5 +1,52 @@
 # Changelog
 
+## 3.0.0
+
+This release introduces **namespace support**, a major restructuring of how CLI commands
+are organized. Commands are now grouped under namespaces that reflect the Qlik Cloud API
+structure, providing a more intuitive and discoverable command hierarchy.
+
+- Breaking: The following operations are no longer supported:
+  - automation run ls
+  - automation settings ls
+  - automation settings update
+  - data-file folder-stats
+  - data-file change-owner-batch
+  - data-file filter
+  - data-file post
+  - data-file put
+  - data-file connection get
+  - reload-task batch
+
+- Breaking: Support for `qlik ml` commands has been removed.
+
+### Namespace command groups
+
+APIs are now organized under namespace prefixes that mirror the Qlik Cloud platform structure.
+The following top-level namespace groups have been added:
+
+- `qlik analytics` - Commands for analytics-related APIs.
+- `qlik core` - Commands for core platform APIs.
+- `qlik data-governance` - Commands for data governance APIs.
+- `qlik workflows` - Commands for workflow and automation APIs.
+
+For example, automation commands previously available as `qlik automation ls` are now
+also available as `qlik workflows automation ls`. Existing top-level commands continue to
+work but will include a notice indicating the new namespaced equivalent via `replacedBy`
+warnings where applicable.
+
+### Replacement warnings
+
+- Operations that have been moved to a namespace now support a `replacedBy` annotation.
+  When using a legacy command that has a namespaced replacement, a warning is displayed
+  pointing to the new command path, for example:
+  `Warning: This command is being replaced by 'qlik workflows automation ls'.`
+
+### Other changes
+- Fixes options incorrectly set as required.
+- Updated golang version to resolve security vulnerabilities (CVEs).
+
+
 ## 2.30.0
 
 This release includes bug-fixes, security updates, and new commands.
@@ -78,7 +125,7 @@ The following commands have been added:
 This release includes a major revision of the internal generator which builds
 part of Qlik CLI based on our OpenAPI specifications.
 
-1. The set of commands available for Qlik CLI will match those 
+1. The set of commands available for Qlik CLI will match those
 available on [qlik.dev](https://qlik.dev) much more closely.
 
 2. We have solved some technical limitations with mapping payload specifications to flags,
@@ -265,7 +312,7 @@ qlik transport email-config validate # validate the config
 
 ```bash
 qlik tenant me # get current tenant information
-qlik tenant patch <tenantId> 
+qlik tenant patch <tenantId>
 ```
 
 - fix: make tcs default in data-file create and update by making resumable flag default true
@@ -545,7 +592,7 @@ do all the PUT/PATCH work for you.
     ```bash
     qlik webhook edit <webhookId>
     # this command will launch your preferred editor containing the resource in json format
-    # changing for example the description parameter and save will be the equivalent of doing 
+    # changing for example the description parameter and save will be the equivalent of doing
     # a patch with payload:
     # [
     #   {
