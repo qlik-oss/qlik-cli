@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.0.2
+
+* Fixes to internal release pipelines
+
+## 3.0.1
+
+* Bump golang version to resolve CVEs
+
 ## 3.0.0
 
 This release introduces **namespace support**, a major restructuring of how CLI commands
