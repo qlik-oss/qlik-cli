@@ -2,12 +2,12 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
-1. Download the the qlik-Windows-x86_64.zip file from <https://github.com/qlik-oss/qlik-cli/releases/tag/v3.0.0>
+1. Download the the qlik-Windows-x86_64.zip file from <https://github.com/qlik-oss/qlik-cli/releases/tag/v3.0.3>
 2. Unpack the archive
 3. Then use one of the following methods to obtain the checksum
   - Use powershell function 'Get-Filehash qlik.exe'
 
   checksum type: sha256
-  checksum: 614b40845c96734daab416e31edd5d2b7e8004343ebec6f588ebe087e8878a96
+  checksum: 45adc4da550d35b043852d4f9a323a12a27da489fa747885339f71bfac14bd75
 
 File 'LICENSE.txt' is obtained from <https://github.com/qlik-oss/qlik-cli/blob/master/LICENSE>
