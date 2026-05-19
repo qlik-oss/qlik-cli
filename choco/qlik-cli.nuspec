@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>3.0.0</version>
+    <version>3.0.3</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,40 +17,7 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-This release introduces **namespace support**, a major restructuring of how CLI commands
-are organized. Commands are now grouped under namespaces that reflect the Qlik Cloud API
-structure, providing a more intuitive and discoverable command hierarchy.
-- Breaking: The following operations are no longer supported:
-  - automation run ls
-  - automation settings ls
-  - automation settings update
-  - data-file folder-stats
-  - data-file change-owner-batch
-  - data-file filter
-  - data-file post
-  - data-file put
-  - data-file connection get
-  - reload-task batch
-- Breaking: Support for `qlik ml` commands has been removed.
-### Namespace command groups
-APIs are now organized under namespace prefixes that mirror the Qlik Cloud platform structure.
-The following top-level namespace groups have been added:
-- `qlik analytics` - Commands for analytics-related APIs.
-- `qlik core` - Commands for core platform APIs.
-- `qlik data-governance` - Commands for data governance APIs.
-- `qlik workflows` - Commands for workflow and automation APIs.
-For example, automation commands previously available as `qlik automation ls` are now
-also available as `qlik workflows automation ls`. Existing top-level commands continue to
-work but will include a notice indicating the new namespaced equivalent via `replacedBy`
-warnings where applicable.
-### Replacement warnings
-- Operations that have been moved to a namespace now support a `replacedBy` annotation.
-  When using a legacy command that has a namespaced replacement, a warning is displayed
-  pointing to the new command path, for example:
-  `Warning: This command is being replaced by 'qlik workflows automation ls'.`
-### Other changes
-- Fixes options incorrectly set as required.
-- Updated golang version to resolve security vulnerabilities (CVEs).</releaseNotes>
+* fix: Fixes an issue where folder creation was failing when using the `data-file create` command.</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
