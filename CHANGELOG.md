@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.3
+
+* fix: Fixes an issue where folder creation was failing when using the `data-file create` command.
+
 ## 3.0.2
 
 * Fixes to internal release pipelines
