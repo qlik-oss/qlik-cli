@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.1.0
+
+This release introduces the new command groups connectivity and scheduling, plus additional commands in analytics, core, data-governance, and tenant settings.
+
+The following commands have been added:
+
+- `qlik analytics change-store editable-column ls` - Inspect editable columns in change-stores
+- `qlik core auth-settings ls` - Manage core authentication settings
+- `qlik core auth-settings patch` - Manage core authentication settings
+- `qlik core data-file` - Manage core data files and folders
+- `qlik connectivity data-connection` - Manage connectivity data-connections
+- `qlik connectivity data-credential` - Manage connectivity data-credentials
+- `qlik connectivity data-source` - Manage connectivity data-sources
+- `qlik data-governance data-quality` - Inspect data quality resources
+- `qlik scheduling task` - Manage scheduling tasks
+- `qlik tenant-settings toggle-cross-region-inference` - Toggle cross-region inference
+
 ## 3.0.3
 
 * fix: Fixes an issue where folder creation was failing when using the `data-file create` command.
