@@ -1,5 +1,28 @@
 # Changelog
 
+## 3.2.0
+
+This release expands the `analytics` command group with ODAG, app evaluation, and discovery agent commands, and adds new data integration project commands.
+
+The following commands have been added:
+
+- `qlik analytics app` - Manage analytics app operations
+- `qlik analytics app evaluation` - Manage app evaluations
+- `qlik analytics app evaluation compare` - Compare app evaluations
+- `qlik analytics odag-app` - List ODAG analytics applications
+- `qlik analytics odag-link` - Manage ODAG links
+- `qlik analytics odag-request` - Manage ODAG requests
+- `qlik analytics odag-settings` - Manage ODAG settings
+- `qlik analytics discovery-agent` - Work with discovery agent insights
+- `qlik analytics discovery-agent adaptive-card` - Generate adaptive cards for metrics
+- `qlik di-project util` - Run data integration project utilities
+- `qlik di-project import-async` - Import a project asynchronously
+- `qlik di-project di-task runtime run` - Manage task run history
+- `qlik di-project di-task runtime run state` - View task run state
+- `qlik di-project di-task runtime run state dataset` - View dataset states in runs
+
+- feat: Adds `--<field>-null` flags on commands with nullable body fields, letting you explicitly send a JSON `null` value.
+
 ## 3.1.0
 
 This release introduces the new command groups connectivity and scheduling, plus additional commands in analytics, core, data-governance, and tenant settings.
