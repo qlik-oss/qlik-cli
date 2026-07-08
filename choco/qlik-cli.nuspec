@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>3.1.0</version>
+    <version>3.2.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,18 +17,23 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-This release introduces the new command groups connectivity and scheduling, plus additional commands in analytics, core, data-governance, and tenant settings.
+This release expands the `analytics` command group with ODAG, app evaluation, and discovery agent commands, and adds new data integration project commands.
 The following commands have been added:
-- `qlik analytics change-store editable-column ls` - Inspect editable columns in change-stores
-- `qlik core auth-settings ls` - Manage core authentication settings
-- `qlik core auth-settings patch` - Manage core authentication settings
-- `qlik core data-file` - Manage core data files and folders
-- `qlik connectivity data-connection` - Manage connectivity data-connections
-- `qlik connectivity data-credential` - Manage connectivity data-credentials
-- `qlik connectivity data-source` - Manage connectivity data-sources
-- `qlik data-governance data-quality` - Inspect data quality resources
-- `qlik scheduling task` - Manage scheduling tasks
-- `qlik tenant-settings toggle-cross-region-inference` - Toggle cross-region inference</releaseNotes>
+- `qlik analytics app` - Manage analytics app operations
+- `qlik analytics app evaluation` - Manage app evaluations
+- `qlik analytics app evaluation compare` - Compare app evaluations
+- `qlik analytics odag-app` - List ODAG analytics applications
+- `qlik analytics odag-link` - Manage ODAG links
+- `qlik analytics odag-request` - Manage ODAG requests
+- `qlik analytics odag-settings` - Manage ODAG settings
+- `qlik analytics discovery-agent` - Work with discovery agent insights
+- `qlik analytics discovery-agent adaptive-card` - Generate adaptive cards for metrics
+- `qlik di-project util` - Run data integration project utilities
+- `qlik di-project import-async` - Import a project asynchronously
+- `qlik di-project di-task runtime run` - Manage task run history
+- `qlik di-project di-task runtime run state` - View task run state
+- `qlik di-project di-task runtime run state dataset` - View dataset states in runs
+- feat: Adds `--&lt;field&gt;-null` flags on commands with nullable body fields, letting you explicitly send a JSON `null` value.</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
