@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0
+
+This release introduces API versioning. `qlik` now pins a Qlik Cloud API version so that command behaviour stays stable as the platform evolves, and warns you when you are using deprecated commands, deprecated flags, or an unsupported API version.
+
 ## 3.2.0
 
 This release expands the `analytics` command group with ODAG, app evaluation, and discovery agent commands, and adds new data integration project commands.
