@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qlik-cli</id>
-    <version>3.2.0</version>
+    <version>3.3.0</version>
     <title>qlik CLI</title>
     <authors>Qliktech International AB</authors>
     <owners>QlikDevToolkit</owners>
@@ -17,23 +17,7 @@ develop and manage apps, migrate data and much more.</description>
     <summary>qlik is a tool for working with any of Qlik Cloud</summary>
     <releaseNotes>## Release notes
 
-This release expands the `analytics` command group with ODAG, app evaluation, and discovery agent commands, and adds new data integration project commands.
-The following commands have been added:
-- `qlik analytics app` - Manage analytics app operations
-- `qlik analytics app evaluation` - Manage app evaluations
-- `qlik analytics app evaluation compare` - Compare app evaluations
-- `qlik analytics odag-app` - List ODAG analytics applications
-- `qlik analytics odag-link` - Manage ODAG links
-- `qlik analytics odag-request` - Manage ODAG requests
-- `qlik analytics odag-settings` - Manage ODAG settings
-- `qlik analytics discovery-agent` - Work with discovery agent insights
-- `qlik analytics discovery-agent adaptive-card` - Generate adaptive cards for metrics
-- `qlik di-project util` - Run data integration project utilities
-- `qlik di-project import-async` - Import a project asynchronously
-- `qlik di-project di-task runtime run` - Manage task run history
-- `qlik di-project di-task runtime run state` - View task run state
-- `qlik di-project di-task runtime run state dataset` - View dataset states in runs
-- feat: Adds `--&lt;field&gt;-null` flags on commands with nullable body fields, letting you explicitly send a JSON `null` value.</releaseNotes>
+This release introduces API versioning. `qlik` now pins a Qlik Cloud API version so that command behaviour stays stable as the platform evolves, and warns you when you are using deprecated commands, deprecated flags, or an unsupported API version.</releaseNotes>
     <tags>qlik-cli</tags>
     <packageSourceUrl>https://github.com/qlik-oss/qlik-cli/blob/master/choco</packageSourceUrl>
     <docsUrl>https://qlik.dev/toolkits/qlik-cli</docsUrl>
