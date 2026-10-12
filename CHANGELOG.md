@@ -1,5 +1,31 @@
 # Changelog
 
+## 3.4.0
+
+This release introduces the new `alerting` command group, adds semantic type and Direct Access agent performance commands, and deprecates the top-level automation commands in favour of the `workflows` command group.
+
+The following commands have been added:
+
+- `qlik alerting sharing-task task-execution` - Examine sharing-task executions
+- `qlik connectivity direct-access-agent benchmark` - Manage direct-access-agent benchmarks
+- `qlik connectivity direct-access-agent load-performance-metric` - View direct-access-agent load performance metrics
+- `qlik data-governance data-quality fields-structure update` - Assign types to dataset fields
+- `qlik data-governance semantic-type` - Manage semantic types
+
+The following commands have been deprecated:
+
+- `qlik automation` subcommands - deprecated since v3.4.0, use `qlik workflows automation` instead
+- `qlik automation-connection` subcommands - deprecated since v3.4.0, use `qlik workflows automation-connection` instead
+- `qlik automation-connector ls` - deprecated since v3.4.0, use `qlik workflows automation-connector ls` instead
+
+- feat: Adds the `--schedules-recurrence` flag to `qlik automation create`, `qlik automation update`, `qlik workflows automation create`, and `qlik workflows automation update`.
+- feat: Adds the `--documentId` flag to `qlik assistant search` and `qlik knowledgebase search`.
+- feat: Adds the `--name` and `--description` flags to `qlik direct-access-agent benchmark create`.
+- feat: Adds the `--registerOnSelectionApp` flag to `qlik analytics odag-link create`.
+- feat: Adds the `--sampleMethod` flag to `qlik data-governance data-quality computation create`.
+- feat: Adds the `--jwksUri` flag to `qlik oauth-client create`.
+- fix: Fixes an issue where app commands against Qlik Sense Enterprise on Windows could fail with `403 Forbidden` when the stored session had expired or did not exist yet.
+
 ## 3.3.0
 
 This release introduces API versioning. `qlik` now pins a Qlik Cloud API version so that command behaviour stays stable as the platform evolves, and warns you when you are using deprecated commands, deprecated flags, or an unsupported API version.
