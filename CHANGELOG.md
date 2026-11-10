@@ -1,5 +1,34 @@
 # Changelog
 
+## 4.0.0
+
+This release moves the default API version to `2026-11`, adds the `core webhook` and `data-governance data-contract` command groups, and deprecates the legacy Direct Access agent commands in favor of `connectivity direct-access-agent`.
+
+- Breaking: The `qlik app evaluation` commands have been removed because the API no longer provides them. Use `qlik analytics app evaluation` instead.
+- Breaking: `qlik connectivity direct-access-agent benchmark ls` and `qlik connectivity direct-access-agent benchmark create` now require the Direct Access agent ID in the `--direct-access-agentId` flag instead of as a positional argument.
+
+The following commands have been added:
+
+- `qlik connectivity direct-access-agent benchmark cancel` - Request benchmark cancellation
+- `qlik connectivity direct-access-agent benchmark get` - Get benchmark status
+- `qlik connectivity direct-access-agent configuration` - View direct-access-agent configuration
+- `qlik connectivity direct-access-agent connector` - Manage direct-access-agent connector configuration
+- `qlik connectivity direct-access-agent restart` - Restart the agent
+- `qlik connectivity direct-access-agent tool` - Manage direct-access-agent tools
+- `qlik core webhook` - Manage webhooks. Replaces the legacy `qlik webhook` commands.
+- `qlik data-governance data-contract` - Manage data contracts
+- `qlik data-governance data-quality global-result data-quality-rule filter` - Get rule-quality aggregation for a rule across datasets
+- `qlik scheduling task resource reload` - Create reload tasks for apps
+
+The following commands have been deprecated:
+
+- `qlik direct-access-agent` subcommands - deprecated since v4.0.0, use `qlik connectivity direct-access-agent` instead
+- The `--schedules-interval` flag on `qlik workflows automation create` and `qlik workflows automation update` - deprecated since API version `2026-11` and will be removed in `2027-11`, use `--schedules-recurrence` instead
+
+- feat: `qlik` now uses API version `2026-11` by default. See [API versioning](https://qlik.dev/apis/versioning/) for what the dated API version means and how deprecation warnings work.
+- feat: Adds the `--accessTokenExpirationDuration` flag to `qlik oauth-client create`.
+- feat: Adds the `--allowedAuthTypes`, `--connectionBlockSettings-restrictionType`, and `--connectionBlockSettings-useConfigs` flags to `qlik connectivity data-source settings update`.
+
 ## 3.4.0
 
 This release introduces the new `alerting` command group, adds semantic type and Direct Access agent performance commands, and deprecates the top-level automation commands in favour of the `workflows` command group.
