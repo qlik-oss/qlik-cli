@@ -1,5 +1,24 @@
 # Changelog
 
+## 4.1.0
+
+This release adds the `analytics reload` command group, deprecates the legacy `qlik webhook` commands in favor of `qlik core webhook`, and fixes missing deprecation warnings for APIs using standard HTTP response headers.
+
+- Breaking: The `--accessTokenExpirationDuration` and `--refreshTokenExpirationDuration` flags have been removed from `qlik oauth-client create` because the API no longer accepts them.
+
+The following commands have been added:
+
+- `qlik analytics reload` - Start, monitor, and cancel reloads of apps.
+
+The following commands have been deprecated:
+
+- `qlik webhook` subcommands - deprecated since API version `2026-11` and will be removed in `2027-11`, use `qlik core webhook` instead.
+
+- feat: Adds the `--qlikApplicationId` flag to `qlik extension create` and `qlik extension patch`.
+- feat: Adds the `--emptyValidity` and `--fields-emptyValidity` flags to `qlik data-governance data-quality fields-structure update`.
+- feat: Adds the `--templates-dynamicFileName-type` and `--templates-dynamicFileName-value` flags to `qlik sharing-task create`.
+- fix: Fixes an issue where deprecation warnings were not shown for endpoints that signal deprecation through the standard `Deprecation`, `Sunset`, and `Link` response headers.
+
 ## 4.0.0
 
 This release moves the default API version to `2026-11`, adds the `core webhook` and `data-governance data-contract` command groups, and deprecates the legacy Direct Access agent commands in favor of `connectivity direct-access-agent`.
